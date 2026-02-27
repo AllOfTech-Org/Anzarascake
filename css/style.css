@@ -258,6 +258,7 @@ ul {
   justify-content: center;
   padding: calc(var(--header-h) + var(--space-3xl)) var(--space-lg) var(--space-3xl);
   overflow: hidden;
+  transition: min-height var(--duration-normal) var(--ease-out-expo);
 }
 
 .hero-bg {
@@ -606,7 +607,7 @@ ul {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--space-xl);
   align-items: start;
 }
@@ -1000,6 +1001,11 @@ a.contact-item:hover {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
+  .hero {
+    min-height: 80vh;
+    padding-top: calc(var(--header-h) + var(--space-2xl));
+  }
+
   .nav {
     position: fixed;
     top: var(--header-h);
@@ -1049,7 +1055,7 @@ a.contact-item:hover {
   }
 
   .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: var(--space-lg);
   }
 }
@@ -1057,6 +1063,16 @@ a.contact-item:hover {
 @media (max-width: 600px) {
   :root {
     --header-h: 4rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding-top: calc(var(--header-h) + var(--space-xl));
+    padding-bottom: var(--space-2xl);
+  }
+
+  .hero-scroll {
+    bottom: var(--space-lg);
   }
 
   .hero-cta {
@@ -1069,7 +1085,8 @@ a.contact-item:hover {
   }
 
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
   }
 }
 
