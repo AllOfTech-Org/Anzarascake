@@ -607,7 +607,7 @@ ul {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--space-xl);
   align-items: start;
 }
@@ -1055,7 +1055,7 @@ a.contact-item:hover {
   }
 
   .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--space-lg);
   }
 }
@@ -1085,8 +1085,7 @@ a.contact-item:hover {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: 1fr;
   }
 }
 
